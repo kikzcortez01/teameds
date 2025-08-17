@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <title>Caret Portal</title>
+  <link rel="icon" href="https://cdn.theorg.com/38208d4e-0adf-4e01-b292-b8281a0d5fc8_thumb.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="portal-page">
+  <script>
+    // Protect portal: redirect if access not granted
+    if(sessionStorage.getItem("accessGranted") !== "true"){
+      alert("Access denied! You need the Team EDS access code 😜");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <nav>
+    <div class="menu">
+      <input type="checkbox" id="check">
+      <div class="logo"><a href="index.html">Caret</a></div>
+      <ul>
+        <label class="btn cancel" for="check"><i class="fas fa-times"></i></label>
+        <li><a href="index.html">Lock</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="#">Team Eds Only</a></li>
+      </ul>
+      <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+  <div class="bookmark-container">
+    <a href="https://abacusnext-helpdesk.zendesk.com/agent/home/tickets" target="_blank" class="bookmark-box">
+      <img src="https://p7.hiclipart.com/preview/2/640/963/zendesk-customer-experience-logo-customer-service-business-business.jpg" alt="Zendesk Logo">
+      <span>Zendesk</span>
+    </a>
+
+    <a href="https://portal.abacusnext.com/#/clients" target="_blank" class="bookmark-box">
+      <img src="https://images.softwaresuggest.com/software_logo/1561525928355_b_50.png" alt="Client Portal Logo">
+      <span>Client Portal</span>
+    </a>
+
+    <a href="https://keepersecurity.com/vault/#" target="_blank" class="bookmark-box">
+      <img src="https://keepersecurity.com/vault/images/keeper_icons/icon_rounded_256.png" alt="Keeper Logo">
+      <span>Keeper</span>
+    </a>
+
+    <a href="https://getcaret.atlassian.net/wiki/home" target="_blank" class="bookmark-box">
+      <img src="https://companieslogo.com/img/orig/TEAM-ddb0dd07.png?t=1720244494" alt="Atlassian Logo">
+      <span>Atlassian</span>
+    </a>
+
+    <a href="https://www.worldtimebuddy.com" target="_blank" class="bookmark-box">
+      <img src="https://cdn-icons-png.freepik.com/512/15397/15397877.png" alt="World Time Logo">
+      <span>World Time</span>
+    </a>
+
+    <a href="https://tamatracker.buwelo.com/CARET_PHIL_WEBTracker_QA/Login.aspx" target="_blank" class="bookmark-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/517/517961.png" alt="Coaching Logs Logo">
+      <span>Coaching Logs</span>
+    </a>
+
+    <a href="https://tama.sbecc.buwelo.com/ESS/wMyLeaveEntitlement.aspx" target="_blank" class="bookmark-box">
+      <img src="https://www.clipartmax.com/png/full/36-362973_57e2285110c224e113fc87b3-icon-employee-self-service-staff-productivity-icon-png.png" alt="EESS Logo">
+      <span>EESS</span>
+    </a>
+
+    <a href="https://home-c36.nice-incontact.com/inContact/Default.aspx?dashboards=on&authCode=20c2b914f33d423e8f6439547790dd33.us-west-2&UHRequest=1=" target="_blank" class="bookmark-box">
+      <img src="https://static.wikia.nocookie.net/logopedia/images/2/28/RingCentral_icon.png/revision/latest?cb=20241012151143" alt="Ring Central Logo">
+      <span>Ring Central</span>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1nEKxrE7Kzc-IxXPxKEn8pzbFGeQoiUISbsSEN4Rg_J0/edit?gid=654432523#gid=654432523" target="_blank" class="bookmark-box">
+      <img src="https://icons.veryicon.com/png/o/miscellaneous/logo-design-of-lingzhuyun/icon-file-type-excel.png" alt="Coaching Auxes Logo">
+      <span>Coaching Auxes</span>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1eLwsZ50B1WYqoynGvtI4mWNM3ym30bbN80-bZchBpHY/edit?gid=0#gid=0" target="_blank" class="bookmark-box">
+      <img src="https://icons.veryicon.com/png/o/miscellaneous/logo-design-of-lingzhuyun/icon-file-type-excel.png" alt="Bio Breaks Auxes Logo">
+      <span>Bio Breaks Auxes</span>
+    </a>
+
+    <a href="https://appcentral.buwelo.com/LMS/LMS/Onboarding_MyTrack.aspx" target="_blank" class="bookmark-box">
+      <img src="https://appcentral.buwelo.com/LMS/dist/img/LMS.png" alt="LMS Logo">
+      <span>LMS</span>
+    </a>
+
+    <a href="https://snackbarmain.buwelo.com/Products/Checkout" target="_blank" class="bookmark-box">
+      <img src="https://media.licdn.com/dms/image/v2/D560BAQFQ4tXZd7fwqw/company-logo_200_200/company-logo_200_200/0/1706674681961/buwelo_logo?e=2147483647&v=beta&t=76QXR3EqogJt30KThReVpt-peO2v1NvMyDPltK_dM_E" alt="SnackBar Logo">
+      <span>SnackBar</span>
+    </a>
+
+    <a href="https://partner.microsoft.com/dashboard/v2/customers/list" target="_blank" class="bookmark-box">
+      <img src="https://pngimg.com/d/microsoft_PNG5.png" alt="Partner Center Logo">
+      <span>Partner Center</span>
+    </a>
+
+    <a href="https://tamatracker.buwelo.com/CARET_PHIL_TamaTracker/login.aspx" target="_blank" class="bookmark-box">
+      <img src="https://icons.veryicon.com/png/o/miscellaneous/all-blue-icon/clock-294.png" alt="Tama Tracker Logo">
+      <span>Tama Tracker</span>
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <title>Caret Portal - Access</title>
+  <link rel="icon" href="https://cdn.theorg.com/38208d4e-0adf-4e01-b292-b8281a0d5fc8_thumb.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <div class="access-container">
+    <h1>Welcome to Team EDS Portal</h1>
+    <p>Enter the access code to continue:</p>
+    <input type="password" id="accessCode" placeholder="Access Code">
+    <button onclick="verifyCode()">Enter</button>
+    <p id="message" class="message"></p>
+  </div>
+
+  <script>
+    // Clear previous session access when visiting index
+    sessionStorage.removeItem("accessGranted");
+
+    function verifyCode() {
+      const code = document.getElementById('accessCode').value.trim();
+      const message = document.getElementById('message');
+      if(code === "teameds2025") {
+        // Correct code, allow access
+        sessionStorage.setItem("accessGranted", "true");
+        window.location.href = "portal.html";
+      } else {
+        message.textContent = "Oops! Wrong code 😜. Only Team EDS members allowed!";
+      }
+    }
+
+    document.getElementById("accessCode").addEventListener("keyup", function(event) {
+      if (event.key === "Enter") verifyCode();
+    });
+  </script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ecf0f3;
+      font-family: 'Poppins', sans-serif;
+    }
+    .access-container {
+      background: #ecf0f3;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #ceced1;
+      text-align: center;
+    }
+    input {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+      margin-top: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #3498db;
+      color: white;
+      box-shadow: -3px -3px 7px #5dade2, 3px 3px 5px #2e86c1;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: inset -3px -3px 7px #5dade2, inset 3px 3px 5px #2e86c1;
+    }
+    .message {
+      margin-top: 15px;
+      color: #e74c3c;
+      font-weight: 500;
+    }
+  </style>
+</body>
+</html>
